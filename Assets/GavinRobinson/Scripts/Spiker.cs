@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Spiker : MonoBehaviour
+public class EnemyPatrol : MonoBehaviour
 {
     public Transform groundDetector;
     
