@@ -290,6 +290,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b537484bd6f00784b8bba29a2adeb397, type: 3}
+--- !u!1 &363427521 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 551791334440850367, guid: 655a00832a30d7c4b9dce75f48694bad, type: 3}
+  m_PrefabInstance: {fileID: 551791335916144677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &363427529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 363427521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bb9945688986742b840082223de8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sr: {fileID: 0}
+  rb: {fileID: 0}
+  moveSpeed: 5
+  horizontalInput: 0
+  isOnGround: 1
+  jumpForce: 250
+  gm: {fileID: 0}
 --- !u!1 &379757975
 GameObject:
   m_ObjectHideFlags: 0
@@ -2826,6 +2850,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 5f5ea9f8085734642a3257d4c470bfe4, type: 2}
+    - target: {fileID: 551791334440850363, guid: 655a00832a30d7c4b9dce75f48694bad, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.02
+      objectReference: {fileID: 0}
     - target: {fileID: 551791334440850366, guid: 655a00832a30d7c4b9dce75f48694bad, type: 3}
       propertyPath: jumpForce
       value: 250
@@ -2834,7 +2862,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 551791334440850366, guid: 655a00832a30d7c4b9dce75f48694bad, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 655a00832a30d7c4b9dce75f48694bad, type: 3}
 --- !u!1001 &3664139477964594854
 PrefabInstance:
