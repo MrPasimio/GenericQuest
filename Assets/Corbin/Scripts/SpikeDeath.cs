@@ -2,9 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JumpThing : MonoBehaviour
+public class SpikeDeath : MonoBehaviour
 {
-    public float jumpForce;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +18,9 @@ public class JumpThing : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if(collision.gameObject.gameObject.gameObject.gameObject.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<PlayerMovement1>().rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            GameObject.Find("GameManager").GetComponent<GameManager>().Respawn();
         }
     }
 }
