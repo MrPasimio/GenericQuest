@@ -7,10 +7,16 @@ public class EnemyDeath : MonoBehaviour
     public bool isHitOnHead;
     public GameObject player;
     public float bounceForce;
+    private ScoreCollection scoreCollection;
+
+    private void Start()
+    {
+        scoreCollection = FindObjectOfType<ScoreCollection>();
+    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             player = collision.gameObject;
             if (isHitOnHead)
@@ -28,5 +34,8 @@ public class EnemyDeath : MonoBehaviour
     {
         player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);
         Destroy(gameObject);
+        scoreCollection.OnEnemyDestroyed(1); // increment score by 1
     }
 }
+
+

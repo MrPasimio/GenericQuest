@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioSource audioSource;
+    public AudioClip audioClip;
+
     //Components
     public SpriteRenderer sr;
     public Rigidbody2D rb;
@@ -50,6 +53,8 @@ public class PlayerMovement : MonoBehaviour
         {
             isOnGround = false;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+            audioSource.clip = audioClip;
+            audioSource.Play();
         }
 
     }
