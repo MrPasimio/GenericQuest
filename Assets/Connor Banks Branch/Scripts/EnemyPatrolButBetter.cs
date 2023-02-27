@@ -27,7 +27,7 @@ public class EnemyPatrolButBetter : MonoBehaviour
 
         if(wall.collider != null)
         {
-            if (wall.collider.gameObject.CompareTag("Ground") || wall.collider.gameObject.CompareTag("Button"))
+            if (wall.collider.gameObject.CompareTag("Ground") || wall.collider.gameObject.CompareTag("Button") || wall.collider.gameObject.CompareTag("Sperk"))
             {
                 transform.Rotate(Vector2.up, 180);
             }
