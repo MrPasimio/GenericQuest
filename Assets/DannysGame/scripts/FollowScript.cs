@@ -5,7 +5,7 @@ using UnityEngine;
 public class FollowScript : MonoBehaviour
 {
     public Vector3 offset;
-    public GameObject thingToFollow;
+    public GameObject thingToFollow; 
 
     // Update is called once per frame
     void Update()
