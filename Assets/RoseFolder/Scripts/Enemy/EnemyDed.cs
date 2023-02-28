@@ -33,7 +33,7 @@ public class EnemyDed : MonoBehaviour
         }
     }
 
-    IEnumerator Die()
+    public IEnumerator Die()
     {
         deathParticles.Play();
         player.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bounceForce, ForceMode2D.Impulse);

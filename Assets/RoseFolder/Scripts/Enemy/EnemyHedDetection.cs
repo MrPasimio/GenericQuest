@@ -8,11 +8,11 @@ public class EnemyHedDetection : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            EnemyDeath ed = transform.parent.GetComponent<EnemyDeath>();
+            EnemyDed ed = transform.parent.GetComponent<EnemyDed>();
 
             ed.isHitOnHead = true;
             ed.player = collision.gameObject;
-           ed.Die();
+            ed.Die();
         }
     }
      

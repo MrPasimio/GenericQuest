@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 7766000911105931519}
   - component: {fileID: 7910279567626606713}
   - component: {fileID: 2658059194553585050}
-  - component: {fileID: 8747547960875351555}
   - component: {fileID: 2441463841228584150}
   m_Layer: 0
   m_Name: Blocker
@@ -4950,18 +4949,6 @@ MonoBehaviour:
   player: {fileID: 0}
   bounceForce: 2
   deathParticles: {fileID: 7766000911105931512}
---- !u!114 &8747547960875351555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7766000911376826867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e2085c517de09d4ba0d503ce8c66e92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2441463841228584150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5017,7 +5004,7 @@ GameObject:
   - component: {fileID: 7766000911669496118}
   - component: {fileID: 7766000911669496112}
   - component: {fileID: 7766000911669496119}
-  - component: {fileID: 7766000911669496113}
+  - component: {fileID: 349821549}
   m_Layer: 0
   m_Name: HeadDetector
   m_TagString: Untagged
@@ -5087,7 +5074,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &7766000911669496113
+--- !u!114 &349821549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5096,6 +5083,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7766000911669496117}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f191ac2dd3485d744b96233e2a485d25, type: 3}
+  m_Script: {fileID: 11500000, guid: 1e2085c517de09d4ba0d503ce8c66e92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
