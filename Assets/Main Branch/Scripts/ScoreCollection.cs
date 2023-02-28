@@ -12,9 +12,9 @@ public class ScoreCollection : MonoBehaviour
         scoreText.text = "Score: " + score;
     }
 
-    public void OnEnemyDestroyed(int Amount)
+    public void OnEnemyDestroyed(int amount)
     {
-        score += Amount;
+        score += amount;
         scoreText.text = "Score: " + score;
     }
 }
