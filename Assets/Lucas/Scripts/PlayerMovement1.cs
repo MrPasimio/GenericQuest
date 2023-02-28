@@ -19,6 +19,9 @@ public class PlayerMovement1 : MonoBehaviour
     //Game Manager
     public GameManager gm;
 
+    //last Input for move
+    private float lastInput;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +36,9 @@ public class PlayerMovement1 : MonoBehaviour
 
         //Horizontal Movement
         horizontalInput = Input.GetAxis("Horizontal");
-        horizontalInput += .1f;
+
+        
+        
         transform.Translate(Vector2.right * moveSpeed * horizontalInput * Time.deltaTime);
 
         //Flip if facing left
@@ -60,6 +65,10 @@ public class PlayerMovement1 : MonoBehaviour
         if(collision.gameObject.CompareTag("Ground"))
         {
             isOnGround = true;
+        }
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Hurt();
         }
     }
 
