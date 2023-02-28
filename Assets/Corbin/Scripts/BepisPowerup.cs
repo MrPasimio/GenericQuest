@@ -2,9 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectStar : MonoBehaviour
+public class BepisPowerup : MonoBehaviour
 {
-    public static float starAmount = 0;
+    public static bool hasCollected = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +22,8 @@ public class CollectStar : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
+            hasCollected = true;
             Destroy(gameObject);
-            starAmount++;
-            Debug.Log(starAmount);
         }
     }
 }

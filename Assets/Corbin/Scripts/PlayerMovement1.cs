@@ -15,9 +15,16 @@ public class PlayerMovement1 : MonoBehaviour
     //Jumping
     public bool isOnGround = true;
     public float jumpForce;
+    private bool canDoubleJump = false;
 
     //Game Manager
     public GameManager gm;
+
+    public GameObject starPrefab;
+    public Transform starSpawnPoint1;
+    public Transform starSpawnPoint2;
+    public GameObject star1;
+    public GameObject star2;
 
     // Start is called before the first frame update
     void Start()
@@ -44,19 +51,25 @@ public class PlayerMovement1 : MonoBehaviour
         {
             sr.flipX = false;
         }
-        
-        //Jump
-        if(Input.GetButtonDown("Jump") && isOnGround)
+
+        if (Input.GetButtonDown("Jump") && !isOnGround && canDoubleJump && BepisPowerup.hasCollected)
         {
-            isOnGround = false;
+            canDoubleJump = false;
+            rb.velocity = Vector2.zero;
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
 
+        if (Input.GetButtonDown("Jump") && isOnGround)
+        {
+            isOnGround = false;
+            canDoubleJump = true;
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Platform"))
         {
             isOnGround = true;
         }
@@ -65,5 +78,15 @@ public class PlayerMovement1 : MonoBehaviour
     public void Hurt()
     {
         gm.Respawn();
+    }
+
+    public void respawnStar()
+    {
+        CollectStar.starAmount = 0;
+        Destroy(star1);
+        Destroy(star2);
+        Instantiate(starPrefab, starSpawnPoint1.position, transform.rotation);
+        Instantiate(starPrefab, starSpawnPoint2.position, transform.rotation);
+        
     }
 }

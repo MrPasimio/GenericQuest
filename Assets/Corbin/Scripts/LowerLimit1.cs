@@ -2,26 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeDeath : MonoBehaviour
+public class LowerLimit1 : MonoBehaviour
 {
+    public float lowerLimit;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(collision.gameObject.gameObject.gameObject.gameObject.gameObject.CompareTag("Player"))
+        if (transform.position.y < lowerLimit)
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().Respawn();
-            collision.gameObject.GetComponent<PlayerMovement1>().respawnStar();
+            GetComponent<PlayerMovement1>().respawnStar();
         }
     }
 }
