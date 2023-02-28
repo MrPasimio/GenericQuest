@@ -52,9 +52,11 @@ namespace jnielsen.Scripts.Controllers.Enemy
 			switch (GetDirection(transform.position, col.transform.position))
 			{
 				case Direction2.Left:
+					playerRb.AddForce(Vector2.up * knockBackForce, ForceMode2D.Impulse);
 					playerRb.AddForce(Vector2.left * knockBackForce, ForceMode2D.Impulse);
 					break;
 				case Direction2.Right:
+					playerRb.AddForce(Vector2.up * knockBackForce, ForceMode2D.Impulse);
 					playerRb.AddForce(Vector2.right * knockBackForce, ForceMode2D.Impulse);
 					break;
 			}

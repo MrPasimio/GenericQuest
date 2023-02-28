@@ -476,7 +476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 0
-  _player: {fileID: 551791335916144686}
+  player: {fileID: 551791335916144686}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2641,7 +2641,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   direction: 1
-  _player: {fileID: 551791335916144686}
+  player: {fileID: 551791335916144686}
 --- !u!1001 &2135291881
 PrefabInstance:
   m_ObjectHideFlags: 0
