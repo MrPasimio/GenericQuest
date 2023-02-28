@@ -8,7 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
-  - enabled: 1
-    path: Assets/Aron Finn/Template Level 1.unity
-    guid: f075783890febe648a8e9cd0ccf9079f
   m_configObjects: {}
