@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Destroyer
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Cloud
   - Water
   - UI
   - 
@@ -42,4 +43,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: ground
+    uniqueID: 2987847027
     locked: 0
