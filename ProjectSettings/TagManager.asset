@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Button
   - Sperk
+  - BEPIS
   layers:
   - Default
   - TransparentFX

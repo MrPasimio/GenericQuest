@@ -11,7 +11,7 @@ public class SperkScript : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             player = collision.gameObject;
-            player.GetComponent<PlayerMovement>().Hurt();
+            player.GetComponent<PlayerMovementButWithBEPIS>().Hurt();
         }
     }
 }
