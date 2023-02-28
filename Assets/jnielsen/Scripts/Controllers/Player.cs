@@ -1,3 +1,5 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 namespace jnielsen.Scripts.Controllers
@@ -52,6 +54,20 @@ namespace jnielsen.Scripts.Controllers
             {
                 _isOnGround = true;
             }
+        }
+
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (!col.CompareTag("Gravity")) return;
+            StartCoroutine(Gravity());
+            Destroy(col.gameObject);
+        }
+
+        private IEnumerator Gravity()
+        {
+            _rigidbody.gravityScale = 0.1f;
+            yield return new WaitForSeconds(5);
+            _rigidbody.gravityScale = 1;
         }
 
         private void GroundCheck()
