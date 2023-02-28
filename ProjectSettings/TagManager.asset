@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Ground
   - Enemy
+  - Button
+  - Sperk
+  - BEPIS
   layers:
   - Default
   - TransparentFX
