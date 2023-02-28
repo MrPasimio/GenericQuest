@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FinalFlag : MonoBehaviour
+public class BurgerCollect : MonoBehaviour
 {
+
+    public GameObject next;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +21,11 @@ public class FinalFlag : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player"))
-            {
-            Debug.Log("Level Complete! GGs!");
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            next.SetActive(true);
             Destroy(gameObject);
         }
     }
+
 }

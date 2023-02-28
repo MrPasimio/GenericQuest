@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -64,6 +65,6 @@ public class PlayerMovement : MonoBehaviour
 
     public void Hurt()
     {
-        gm.Respawn();
+        SceneManager.LoadScene("Dan's Level");
     }
 }
