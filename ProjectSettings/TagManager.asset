@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Destroyer
   - Wall
+  - Gravity
   layers:
   - Default
   - TransparentFX
