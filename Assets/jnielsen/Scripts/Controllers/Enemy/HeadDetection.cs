@@ -8,11 +8,10 @@ namespace jnielsen.Scripts.Controllers.Enemy
 		{
 			if (collision.gameObject.CompareTag("Player"))
 			{
-				EnemyDeath ed = transform.parent.GetComponent<EnemyDeath>();
+				var blocker = transform.parent.GetComponent<Blocker>();
 
-				ed.isHitOnHead = true;
-				ed.player = collision.gameObject;
-				ed.Die();
+				blocker.isHitOnHead = true;
+				blocker.Die(collision.gameObject.GetComponent<Rigidbody2D>());
 			}
 		}
 	}
