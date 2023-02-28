@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Kyle-Branch/Scenes/Kyle-Level.unity
+    guid: a833e248bf6dd9d4facc04070f9312d3
+  - enabled: 1
+    path: Assets/Kyle-Branch/Scenes/Kyle-Level2.unity
+    guid: 1d41e2b47c32e4c4cb8cc6c75200d89b
+  - enabled: 1
+    path: Assets/Kyle-Branch/Scenes/Kyle-Level3.unity
+    guid: 7458b340c0a4844448b70d5500529776
   m_configObjects: {}
